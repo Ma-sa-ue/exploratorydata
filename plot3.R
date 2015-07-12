@@ -17,13 +17,13 @@ for(i in 1:2880){
 }
 
 ##plot3.R
-plot(g,a1$Sub_metering_1,ylim=c(0,30),type="l",ylab="Energy sub metering")
+plot(g,a1$Sub_metering_1,ylim=c(0,30),type="l",xlab="",ylab="Energy sub metering")
 lines(g,a1$Sub_metering_2,col="red")
 lines(g,a1$Sub_metering_3,col="blue")
 legend("topright", 
        col = c("black", "red", "blue"),
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
-       lwd = 2)
+       lwd = 2,cex=0.7)
 dev.copy(png,file="plot3.png")
 dev.off()
 
